@@ -1,0 +1,22 @@
+{
+  "name": "pbkdf2-wrapper",
+  "version": "1.0.0",
+  "description": "A wrapper around the inbuilt pbkdf2 crypto function for password hashing",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markwylde/pbkdf2-wrapper.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markwylde/pbkdf2-wrapper/issues"
+  },
+  "homepage": "https://github.com/markwylde/pbkdf2-wrapper#readme",
+  "devDependencies": {
+    "tape": "^4.11.0"
+  }
+}
