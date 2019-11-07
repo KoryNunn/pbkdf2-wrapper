@@ -1,6 +1,6 @@
 {
   "name": "pbkdf2-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A wrapper around the inbuilt pbkdf2 crypto function for password hashing",
   "main": "index.js",
   "scripts": {
