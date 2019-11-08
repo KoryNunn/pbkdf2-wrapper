@@ -1,6 +1,32 @@
 const test = require('tape')
+const righto = require('righto')
+righto._debug = true;
+righto._autotraceOnError = true;
 
 const passwordHash = require('../lib')
+
+test('password hash with config', async t => {
+  t.plan(3)
+
+  const config = {
+    encoding: 'hex',
+    digest: 'sha512',
+    hashBytes: 64,
+    saltBytes: 32,
+    iterations: 30000
+  }
+
+  const password = passwordHash.hash('test-password', config)
+  const equality = passwordHash.verify('test-password', password, config)
+
+  const results = righto.mate(password, equality)
+
+  results(function(error, password, equality){
+    t.notOk(error)
+    t.ok(password.startsWith('0000002'))
+    t.ok(equality)
+  })
+})
 
 test('password hash with config', async t => {
   t.plan(2)
