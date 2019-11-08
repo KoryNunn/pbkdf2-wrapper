@@ -28,7 +28,7 @@ test('password hash with config', async t => {
   })
 })
 
-test('password hash with config', async t => {
+test('promises - password hash with config', async t => {
   t.plan(2)
 
   const config = {
@@ -46,7 +46,7 @@ test('password hash with config', async t => {
   t.ok(equality)
 })
 
-test('password hash', async t => {
+test('promises - password hash', async t => {
   t.plan(1)
 
   const password = await passwordHash.hash('test-password')
@@ -54,7 +54,7 @@ test('password hash', async t => {
   t.ok(password.startsWith('0000001'))
 })
 
-test('password verify correct', async t => {
+test('promises - password verify correct', async t => {
   t.plan(1)
 
   const password = await passwordHash.hash('test-password')
@@ -63,7 +63,7 @@ test('password verify correct', async t => {
   t.ok(equality)
 })
 
-test('password verify incorrect', async t => {
+test('promises - password verify incorrect', async t => {
   t.plan(1)
 
 
